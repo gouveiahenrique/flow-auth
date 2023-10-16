@@ -8,4 +8,4 @@ install:
 	# Install flow-auth and its dependencies
 	@sudo rm -rf /usr/local/flow
 	@sudo mkdir /usr/local/flow
-	@sudo npm i -g electron --prefix /usr/local/flow https://github.com/gouveiahenrique/flow-auth.git
+	@sudo npm i -g --prefix /usr/local/flow electron https://github.com/gouveiahenrique/flow-auth.git
