@@ -3,6 +3,7 @@ const cors = require('cors');
 const { app, BrowserWindow, session } = require("electron");
 
 const FLOW_TOKEN = "FlowToken";
+const FLOW_TENANT = "FlowTenant";
 const FLOW_URL = "https://flow.ciandt.com/account/sign-in";
 
 let mainWindow;
@@ -20,8 +21,8 @@ app.on("ready", () => {
 
 router.get('/login', async (req, res) => {
     startAuthFlow();
-    const token = await windowDidFinishLoadHandler();
-    res.json({ "token": token });
+    const authResponse = await windowDidFinishLoadHandler();
+    res.json(authResponse);
 });
 
 server.use('/api/flow', router);
@@ -49,8 +50,9 @@ const windowDidFinishLoadHandler = () => {
         mainWindow.webContents.on("did-finish-load", () => {
             session.defaultSession.cookies.get({ url: FLOW_URL }).then(cookies => {
                 const token = cookies.filter(cookie => cookie.name === FLOW_TOKEN).at(0).value ?? "";
-                if (token != null && token.length > 0) {
-                    resolve(token);
+                const tenant = cookies.filter(cookie => cookie.name === FLOW_TENANT).at(0).value ?? ""
+                if (token != null && token.length > 0 && tenant != null && tenant.length > 0) {
+                    resolve({ "token": token, "tenant": tenant });
                     mainWindow.close();
                 }
             }).catch((error) => {
@@ -64,5 +66,6 @@ const windowDidFinishLoadHandler = () => {
 const startAuthFlow = () => {
     mainWindow.show();
     session.defaultSession.cookies.remove(FLOW_URL, FLOW_TOKEN);
+    session.defaultSession.cookies.remove(FLOW_URL, FLOW_TENANT);
     mainWindow.loadURL(FLOW_URL);
 };
