@@ -11,7 +11,7 @@ Siga os passos abaixo para instalar o plugin para IntelliJ e Android Studio.
 O primeiro passo é instalar o agente que fará a conexão com o portal do Flow para autenticar. Para isso, execute o seguinte comando no seu terminal:
 
 ```
-curl -s https://github.com/gouveiahenrique/flow-auth/blob/main/Makefile -o Makefile && make install
+curl -s https://raw.githubusercontent.com/gouveiahenrique/flow-auth/main/Makefile -o Makefile && make install
 ```
 
 Este comando baixará o Makefile do repositório e executará o comando `make install` para instalar o agente de autenticação Flow.
