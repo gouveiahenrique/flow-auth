@@ -39,7 +39,9 @@ Para que a IDE possa se comunicar com o agente de autenticação do Flow, você 
 ### Para Linux:
 
 - **Android Studio**: `/opt/android-studio/bin/studio.sh`
-- **IntelliJ IDEA**: `/opt/idea/bin/idea.sh`
+- **IntelliJ IDEA**:
+  - `/snap/bin/intellij-idea-community` (Instalado via `snap`)
+  - `/opt/idea/bin/idea.sh` (Instalado por método alternativo)
 
 ## Passo 4: Acesse o menu de plugins
 
