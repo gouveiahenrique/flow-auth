@@ -1,11 +1,25 @@
 install:
-	# Check if node is installed
-	@command -v node > /dev/null || (echo "Node is not installed. Installing..." && curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash && . ~/.nvm/nvm.sh && nvm install node)
-
-	# Check if npm is installed
-	@command -v npm > /dev/null || (echo "npm is not installed. Installing..." && curl -L https://www.npmjs.com/install.sh | sh)
-
 	# Install flow-auth and its dependencies
+	@echo "Please enter your root password if it's asked"
 	@sudo rm -rf /usr/local/flow
-	@sudo mkdir /usr/local/flow
-	@sudo npm i -g --prefix /usr/local/flow electron https://github.com/gouveiahenrique/flow-auth.git
+	# Determine the operating system and trigger the appropriate installation step
+	@if [ `uname -s` = "Linux" ]; then \
+		make linux; \
+	elif [ `uname -s` = "Darwin" ]; then \
+		make macos; \
+	else \
+		echo "Unsupported operating system: `uname -s`"; \
+	fi
+
+linux:
+	# Installation for Linux
+	@curl -L https://github.com/gouveiahenrique/flow-auth/raw/main/authenticator/Linux/flow-auth.deb -o flow-auth.deb
+	@sudo dpkg -i flow-auth.deb
+	@rm -rf flow-auth.deb
+
+macos:
+	# Installation for macOS
+	@curl -L https://github.com/gouveiahenrique/flow-auth/raw/main/authenticator/MacOS/flow-auth.zip -o flow-auth.zip
+	@unzip flow-auth.zip
+	@cp -fr flow-auth.app /Applications && rm -rf flow-auth.app flow-auth.zip __MACOSX
+	@xattr -dr com.apple.quarantine "/Applications/flow-auth.app";
