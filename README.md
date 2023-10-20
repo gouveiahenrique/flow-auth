@@ -1,73 +1,45 @@
-# Instalação do Plugin para IntelliJ e Android Studio
+# Plugin Installation for IntelliJ and Android Studio
 
-Siga os passos abaixo para instalar o plugin para IntelliJ e Android Studio.
+Follow the steps below to install the plugin for IntelliJ and Android Studio.
 
-## Pré-requisitos
+## Step 1: Install the Flow authentication agent
 
-- Verifique se você possui a versão 16.* do Node.js instalada na sua máquina. Para isso, execute o comando `node --version` no terminal. Caso não possua, [baixe e instale](https://nodejs.org/en/download/) a versão correta do Node.js.
-
-## Passo 1: Instalar o agente de autenticação Flow
-
-O primeiro passo é instalar o agente que fará a conexão com o portal do Flow para autenticar. Para isso, execute o seguinte comando no seu terminal:
+The first step is to install the agent that will connect to the Flow portal for authentication. To do this, execute the following command in your terminal:
 
 ```
 curl -s https://raw.githubusercontent.com/gouveiahenrique/flow-auth/main/Makefile -o Makefile && make install
 ```
 
-Este comando baixará o Makefile do repositório e executará o comando `make install` para instalar o agente de autenticação Flow.
+This command will download the Makefile from the repository and run the command `make install` to install the Flow authentication agent.
 
-## Passo 2: Verificar a instalação
+## Step 2: Open the IDE
 
-- Verifique se não houve nenhum erro durante a instalação.
-- Para ter certeza que o agente foi instalado com sucesso, execute o seguinte comando:
+Open IntelliJ IDEA or Android Studio on your computer.
 
-```
-/usr/local/flow/bin/electron /usr/local/flow/lib/node_modules/flow-auth/index.js
-```
+## Step 3: Access the plugins menu
 
-Caso visualize a mensagem `Server running on port 22450`, significa que o agente foi instalado com sucesso.
+In the main menu, go to File > Settings (on Windows and Linux) or IntelliJ IDEA > Preferences (on macOS). 
 
-## Passo 3: Inicializar a IDE via linha de comando
+Then select Plugins on the left panel.
 
-Para que a IDE possa se comunicar com o agente de autenticação do Flow, você precisará inicializá-la via linha de comando. Feche a IDE se ela estiver aberta, e então abra-a novamente a partir do terminal.
+## Step 3.1: Add custom repository
 
-### Para macOS:
+Before installing the plugin, you need to add a custom repository. Click on the gear icon in the upper right corner of the Plugins window and select **Manage Plugin Repositories**.
 
-- **Android Studio**: `open -na "Android Studio.app"`
-- **IntelliJ IDE**A: `open -na "IntelliJ IDEA CE.app"`
-
-### Para Linux:
-
-- **Android Studio**: `/opt/android-studio/bin/studio.sh`
-- **IntelliJ IDEA**:
-  - `/snap/bin/intellij-idea-community` (Instalado via `snap`)
-  - `/opt/idea/bin/idea.sh` (Instalado por método alternativo)
-
-## Passo 4: Acesse o menu de plugins
-
-No menu principal, vá para File > Settings (no Windows e Linux) ou IntelliJ IDEA > Preferences (no macOS). 
-
-Em seguida, selecione Plugins no painel à esquerda.
-
-
-## Passo 4.1: Adicionar repositório personalizado
-
-Antes de instalar o plugin, você precisa adicionar um repositório personalizado. Clique no ícone de engrenagem no canto superior direito da janela de Plugins e selecione **Manage Plugin Repositories**.
-
-Clique no botão **+** para adicionar um novo repositório e insira o seguinte link:
+Click the **+** button to add a new repository and enter the following link:
 
 `https://raw.githubusercontent.com/gouveiahenrique/flow-auth/main/plugin/flowPlugins.xml`
 
-Clique em **OK** para adicionar o repositório e feche a janela **Custom Plugin Repositories**.
+Click on **OK** to add the repository and close the **Custom Plugin Repositories** window.
 
-## Passo 5: Pesquise e instale o plugin
+## Step 4: Search and install the plugin
 
-Agora, vá para a aba **Marketplace** e pesquise por **"Flow@IDE"** na barra de pesquisa.
+Now, go to the **Marketplace** tab and search for "Flow@IDE" in the search bar.
 
-Encontre o plugin na lista de resultados e clique no botão **Install**.
+Find the plugin in the list of results and click the **Install** button.
 
-## Passo 6: Reinicie o IntelliJ ou Android Studio
+## Step 5: Restart IntelliJ or Android Studio
 
-Após a instalação do plugin, reinicie o IntelliJ IDEA ou o Android Studio para que as alterações entrem em vigor.
+After installing the plugin, restart IntelliJ IDEA or Android Studio for the changes to take effect.
 
-Parabéns! Agora você instalou com sucesso o plugin para IntelliJ e Android Studio.
+Congratulations! You have now successfully installed the plugin for IntelliJ and Android Studio.
