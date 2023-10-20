@@ -121,6 +121,7 @@ $tf/
 
 # Guidance Automation Toolkit
 *.gpState
+.DS_Store
 
 # ReSharper is a .NET coding add-in
 _ReSharper*/
