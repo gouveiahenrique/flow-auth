@@ -23,3 +23,5 @@ macos:
 	@unzip flow-auth.zip
 	@cp -fr flow-auth.app /Applications && rm -rf flow-auth.app flow-auth.zip __MACOSX
 	@xattr -dr com.apple.quarantine "/Applications/flow-auth.app";
+	@open -a "flow-auth"
+	@pkill -x flow-auth
