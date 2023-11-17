@@ -16,7 +16,7 @@ available at this repository.
   -->
   <plugin
       id="com.ciandt.flow.at.ide"
-      url="https://github.com/gouveiahenrique/flow-auth/raw/main/plugin/Flow@IDE-0.0.3.zip"
+      url="https://github.com/gouveiahenrique/flow-auth/raw/main/plugin/Flow@IDE-0.0.5.zip"
       version="0.0.3">
     <!--
     The <idea-version> element (required) must match the same element
