@@ -1,5 +1,5 @@
 install:
-    # Install flow-auth and its dependencies
+	# Install flow-auth and its dependencies
 	@echo "Please enter your root password if it's asked"
 	@sudo rm -rf /usr/local/flow
 	# Determine the operating system and trigger the appropriate installation step
