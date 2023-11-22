@@ -1,19 +1,15 @@
 install:
     # Install flow-auth and its dependencies
-    @echo "Please enter your root password if it's asked"
-    @if [ `uname -s` = "Windows" ]; then \
-        make windows; \
-    else \
-        sudo rm -rf /usr/local/flow; \
-    fi
-    # Determine the operating system and trigger the appropriate installation step
-    @if [ `uname -s` = "Linux" ]; then \
-        make linux; \
-    elif [ `uname -s` = "Darwin" ]; then \
-        make macos; \
-    else \
-        echo "Unsupported operating system: `uname -s`"; \
-    fi
+	@echo "Please enter your root password if it's asked"
+	@sudo rm -rf /usr/local/flow
+	# Determine the operating system and trigger the appropriate installation step
+	@if [ `uname -s` = "Linux" ]; then \
+		make linux; \
+	elif [ `uname -s` = "Darwin" ]; then \
+		make macos; \
+	else \
+		echo "Unsupported operating system: `uname -s`"; \
+	fi
 
 linux:
 	# Installation for Linux
@@ -29,8 +25,3 @@ macos:
 	@xattr -dr com.apple.quarantine "/Applications/flow-auth.app";
 	@open -a "flow-auth"
 	@pkill -x flow-auth
-
-windows:
-	# Installation for Windows
-	@curl -L https://github.com/gouveiahenrique/flow-auth/raw/main/authenticator/Windows/flow-auth.exe -o flow-auth.exe
-	@start flow-auth.exe
