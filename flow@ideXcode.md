@@ -4,15 +4,27 @@ If you have already installed Copilot for Xcode, you must uninstall it before in
 
 ## Step 2: Initial Settings
 
-1 - Go to your computer settings and click on **Security & Privacy**. Give Flow@IDE permissions for the Accessibility API.
+1 - To perform the initial settings, on the application's main screen there are two buttons that will take you to the macOS settings. The first one will take you to the accessibility setting.
+
+<img alt="Accessibility API" src="images/AccessibilityButton.png" width="500px">
+
+Then you must enable the Flow@IDEExtensionService.
 
 <img alt="Accessibility API" src="images/Accessibility.png" width="500px">
 
-2 - Still in **Security & Privacy**, in extensions, add Flow@IDE as the Xcode code editor.
+2 - The second button will take you to Xcode extensions setting.
+
+<img alt="Accessibility API" src="images/ExtensionsButton.png" width="500px">
+
+Select the cell containing the text **Xcode Code Editor**.
+
+<img alt="Accessibility API" src="images/ExtensionsScreen.png" width="500px">
+
+And enable the extension.
 
 <img alt="Accessibility API" src="images/Extensions.png" width="500px">
 
-## Step 3: Open Flow@IDE
+## Step 3: Authenticate the Flow@IDE
 
 Open the Flow@IDE application.
 
