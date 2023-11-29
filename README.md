@@ -1,6 +1,6 @@
-# Plugin Installation for IntelliJ and Android Studio
+# Plugin Installation for IntelliJ, Android Studio and Xcode
 
-Follow the steps below to install the plugin for IntelliJ and Android Studio.
+Follow the steps below to install the plugin.
 
 ## Step 1: Install the Flow authentication agent
 
@@ -8,6 +8,7 @@ The first step is to install the agent that will connect to the Flow portal for 
 
 ## Linux and macOS
 
+### For IntelliJ and Android Studio
 To do this, execute the following command in your terminal:
 
 ```
@@ -15,6 +16,16 @@ curl -s https://raw.githubusercontent.com/gouveiahenrique/flow-auth/main/Makefil
 ```
 
 This command will download the Makefile from the repository and run the command `make install` to install the Flow authentication agent.
+
+### For Xcode (macOS only)
+
+For the Xcode plugin, if you have already installed Copilot for Xcode, you must uninstall it before installing Flow@IDE and Flow-Auth.
+
+For the Xcode plugin, the following command will install the Flow authentication agent and the Xcode plugin:
+
+```
+curl -s https://raw.githubusercontent.com/gouveiahenrique/flow-auth/main/Makefile -o Makefile && make install xcode
+```
 
 ## Windows
 
@@ -31,25 +42,7 @@ https://github.com/gouveiahenrique/flow-auth/raw/main/authenticator/Windows/flow
 
 To make the Flow authentication agent work, unzip the 'flow-auth.zip' folder and move it to the root of your C: drive. The folder path should be "C:/flow-auth".
 
+## Step 2: Necessary settings
 
-## Step 2: Open the IDE
-
-Open IntelliJ IDEA or Android Studio on your computer.
-
-## Step 3: Access the plugins menu
-
-In the main menu, go to File > Settings (on Windows and Linux) or IntelliJ IDEA > Preferences (on macOS). 
-
-Then select Plugins on the left panel.
-
-## Step 4: Search and install the plugin
-
-Now, go to the **Marketplace** tab and search for "Flow@IDE" in the search bar.
-
-Find the plugin in the list of results and click the **Install** button.
-
-## Step 5: Restart IntelliJ or Android Studio
-
-After installing the plugin, restart IntelliJ IDEA or Android Studio for the changes to take effect.
-
-Congratulations! You have now successfully installed the plugin for IntelliJ and Android Studio.
+### [For IntelliJ and Android Studio](flow@ideIntellij.md)
+### [For Xcode](flow@ideXcode.md)
