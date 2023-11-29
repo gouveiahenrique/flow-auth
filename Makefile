@@ -25,3 +25,12 @@ macos:
 	@xattr -dr com.apple.quarantine "/Applications/flow-auth.app";
 	@open -a "flow-auth"
 	@pkill -x flow-auth
+
+xcode:
+	# Install Flow@IDE
+	@curl -L https://github.com/gouveiahenrique/flow-auth/raw/main/plugin/xcode/Flow@IDE0.0.1.zip -o Flow@IDE.zip
+	@unzip Flow@IDE.zip
+	@cp -fr Flow@IDE.app /Applications && rm -rf Flow@IDE.app Flow@IDE.zip __MACOSX
+	@xattr -dr com.apple.quarantine "/Applications/Flow@IDE.app";
+	@open -a "Flow@IDE"
+	@pkill -x Flow@IDE
