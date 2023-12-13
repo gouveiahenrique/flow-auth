@@ -3,12 +3,23 @@
     <channel>
         <title>Flow@IDE</title>
         <item>
+            <title>0.0.2</title>
+            <pubDate>Wed, 13 Dec 2023 14:44:01 -0300</pubDate>
+            <sparkle:version>2</sparkle:version>
+            <sparkle:shortVersionString>0.0.2</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://raw.githubusercontent.com/gouveiahenrique/flow-auth/main/plugin/xcode/Flow@IDE0.0.2.zip" length="26703267" type="application/octet-stream" sparkle:edSignature="Oo+3KKh2BQ+yfk2amAM5t7wNMS3chk3Xv8qbH6xJa6Z309WTe12koflPtL5zbrQ+7qovqL9+TXMG6t963RoLDw=="/>
+            <sparkle:deltas>
+                <enclosure url="https://raw.githubusercontent.com/gouveiahenrique/flow-auth/main/plugin/xcode/Flow@IDE2-1.delta" sparkle:deltaFrom="1" length="1716830" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="865040" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,en" sparkle:edSignature="7YYTBeg7bXwFxEf1nTz6xbdNVgfJRvfUsi8JJ8wyr2g3L0UzBkcY8kY24ryOb/XGkoBITr32vasj5LyimqbvCA=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>0.0.1</title>
             <pubDate>Thu, 16 Nov 2023 09:01:53 -0300</pubDate>
             <sparkle:version>1</sparkle:version>
             <sparkle:shortVersionString>0.0.1</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://raw.githubusercontent.com/gouveiahenrique/flow-auth/main/plugin/xcode/Flow@IDE0.0.1.zip" length="26711699" type="application/octet-stream" sparkle:edSignature="Ggnh/zKgq3buke40Otvgfce9Jom5+bxN1ESQcRSRgA9SH49NVVt2vcxrSSK7OPmmo3irpj3XpziwFre66mv3Bg=="/>
+            <enclosure url="https://raw.githubusercontent.com/gouveiahenrique/flow-auth/main/plugin/xcode/Flow@IDE0.0.1.zip" length="26699318" type="application/octet-stream" sparkle:edSignature="gh8m2Cf4LzeJdS1NLKcLv/5I8TCoQxjKuzh+oUQriFttS+ydI1OUzVEqcYpZkpZu6bflx0HnhqCoWHxwtXBODg=="/>
         </item>
     </channel>
 </rss>
