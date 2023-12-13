@@ -3,6 +3,18 @@
     <channel>
         <title>Flow@IDE</title>
         <item>
+            <title>0.0.3</title>
+            <pubDate>Wed, 13 Dec 2023 15:07:10 -0300</pubDate>
+            <sparkle:version>3</sparkle:version>
+            <sparkle:shortVersionString>0.0.3</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://raw.githubusercontent.com/gouveiahenrique/flow-auth/main/plugin/xcode/Flow@IDE0.0.3.zip" length="26732541" type="application/octet-stream" sparkle:edSignature="2BCE+VyQV2wcta5bdyiHXnIuvDO7aIKXq8/t/pBBXgrXcjwNTyUAvUg4dhzpYHxSDu686tWu3qxGXDgPme9kBA=="/>
+            <sparkle:deltas>
+                <enclosure url="https://raw.githubusercontent.com/gouveiahenrique/flow-auth/main/plugin/xcode/Flow@IDE3-2.delta" sparkle:deltaFrom="2" length="1908022" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="865040" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,en" sparkle:edSignature="SZtlDmyN53hYZX6wH2JuRL/pIXxPwc4hW3Gyg30kcEnKg5qUaeBRzSUzhs7/ia/Z1iBYDdRVn0YUv451uLXtAg=="/>
+                <enclosure url="https://raw.githubusercontent.com/gouveiahenrique/flow-auth/main/plugin/xcode/Flow@IDE3-1.delta" sparkle:deltaFrom="1" length="2284822" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="865040" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,en" sparkle:edSignature="4A5falS1RDHG7pnQqLc/GkWlgV91Mzwgo6rcwTx3zEaBupNwInnw5sfc2ajjGFn8gSvHfeL/QEijoMMXWwoNAg=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>0.0.2</title>
             <pubDate>Wed, 13 Dec 2023 14:44:01 -0300</pubDate>
             <sparkle:version>2</sparkle:version>
