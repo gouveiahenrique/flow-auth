@@ -1,7 +1,5 @@
 install:
 	# Install flow-auth and its dependencies
-	@echo "Please enter your root password if it's asked"
-	@sudo rm -rf /usr/local/flow
 	# Determine the operating system and trigger the appropriate installation step
 	@if [ `uname -s` = "Linux" ]; then \
 		make linux; \
@@ -14,7 +12,6 @@ install:
 linux:
 	# Installation for Linux
 	@curl -L https://github.com/gouveiahenrique/flow-auth/raw/main/authenticator/Linux/flow-auth.deb -o flow-auth.deb
-	@sudo dpkg -i flow-auth.deb
 	@rm -rf flow-auth.deb
 
 macos:
