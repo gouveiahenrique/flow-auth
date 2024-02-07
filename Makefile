@@ -16,7 +16,7 @@ linux:
 
 macos:
 	# Installation for macOS
-	@curl -L https://github.com/gouveiahenrique/flow-auth/raw/main/authenticator/MacOS/flow-auth.zip -o flow-auth.zip
+	@echo `curl -L https://github.com/gouveiahenrique/flow-auth/raw/main/authenticator/MacOS/flow-auth.zip -o flow-auth.zip`
 	@unzip flow-auth.zip
 	@cp -fr flow-auth.app /Applications && rm -rf flow-auth.app flow-auth.zip __MACOSX
 	@xattr -dr com.apple.quarantine "/Applications/flow-auth.app";
